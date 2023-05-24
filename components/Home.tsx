@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import elon from '@/imgs/elon.jpg'
+import elon from '@/imgs/jag2.jpg'
 import { BiDownArrowAlt } from 'react-icons/bi'
 import React, { useEffect } from 'react';
 import {scrollToPosition} from '@/hooks/utilities'
@@ -44,7 +44,7 @@ export default function Home() {
             
             </div>
             <div className='opacity-90 bg-secondary-50 dark:bg-secondary-200 overflow-hidden max-[1023px]:mt-20 motion-safe:animate-fadein_right h-80 w-80 xl:h-[30rem] xl:w-[30rem]  lg:w-[25rem] lg:h-[25rem] rounded-full' data-scroll="right">
-                <Image className='backdrop-blur-3xl shadow-primary-100 drop-shadow-[0_10px_10px_rgba(0,0,0,3)]' src={elon} alt=''></Image>
+                <Image className='-translate-y-14 backdrop-blur-3xl shadow-primary-100 drop-shadow-[0_10px_10px_rgba(0,0,0,3)]' src={elon} alt=''></Image>
             </div>
             </div>
         </div>
