@@ -6,6 +6,12 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'mini': '350px',
+      'sm': '576px',
+      'md': '900px',
+      'lg': '1280px',
+    },
     fontFamily: {
       display: ['Pally', 'Comic Sans MS', 'sans-serif'],
       body: ['Pally', 'Comic Sans MS', 'sans-serif'],
@@ -24,7 +30,7 @@ module.exports = {
         900: '#881337',
       },
       secondary: {
-        50: '#22223B',
+        50: '#222222',
         100: '#b6acb4',
         200: '#C9ADA7',
         300: '#F2E9E4',
@@ -38,13 +44,18 @@ module.exports = {
     },
     extend: {
     backgroundImage: {
-      'elon' : 'url("https://img.freepik.com/free-photo/beautiful-milky-way-night-sky_53876-139825.jpg?w=1380&t=st=1684764976~exp=1684765576~hmac=213958cd7c939d69b1e639e0ff8e819321dbf14eda9409ebf43539993eb44094")'
+      'elon' : 'url("@/imgs/portrait-background.svg")'
+    },
+    dropShadow: {
+      '3xl': '0 0 70px rgb(0 0 0 / 0.45)',
     },
     animation: {
       fadein_left: 'fadein_left 1s ease-in-out',
       fadeout_left: 'fadein_left 1s ease-in-out',
       fadein_right: 'fadein_right 1s ease-in-out',
       fadein_bottom: 'fadein_bottom 1s ease-in-out',
+      color: 'color 15s infinite ease-in-out',
+      shadow: 'shadow 5s infinite alternate',
     },
     keyframes: {
         fadein_left: {
@@ -52,6 +63,20 @@ module.exports = {
           '80%': { transform: 'translateX(0rem)' },
           '85%': { transform: 'translateX(-1rem)'},
           '100%': { transform: 'translateX(0rem)'},
+        },
+        shadow: {
+          '0%': { filter: 'drop-shadow(0 0 70px rgb(0 0 0 / 0.85))' },
+          '25%': {  filter: 'drop-shadow(0 0 70px rgb(0 0 0 / 0.75))' },
+          '50%': { filter: 'drop-shadow(0 0 70px rgb(0 0 0 / 0.65))' },
+          '75%': { filter: 'drop-shadow(0 0 70px rgb(0 0 0 / 0.55))' },
+          '100%': { filter: 'drop-shadow(0 0 70px rgb(0 0 0 / 0.45))' },
+        },
+        color: {
+          '0%': { filter: 'hue-rotate(0deg)' },
+          '25%': {  filter: 'hue-rotate(90deg)' },
+          '50%': { filter: 'hue-rotate(180deg)' },
+          '75%': { filter: 'hue-rotate(360deg)' },
+          '100%': { filter: 'hue-rotate(720deg)' },
         },
         fadeout_left: {
           '0%': { transform: 'translateX(0rem)' },

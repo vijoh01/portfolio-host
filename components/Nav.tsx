@@ -37,10 +37,8 @@ export default function Nav() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.matchMedia('(min-width: 1024px)').matches) {
+      if (window.matchMedia('(min-width: 1390px)').matches) {
         setShowDiv(false);
-      } else {
-        setShowDiv(true);
       }
     };
 
@@ -58,16 +56,16 @@ export default function Nav() {
   return (
     <nav className={"h-12 lg:min-h-screen min-w-10 w-screen lg:min-w-40 lg:w-40 fixed z-40 bg-primary-100 dark:bg-secondary-100 text-primary-50 dark:text-secondary-50 flex flex-col justify-between"}>
       <div className={"text-3xl flex lg:flex-col mb-5 font-bold"} >
-        <button onClick={handleButtonClick} className="max-[1023px]:visible lg:hidden w-full flex items-center max-[1023px]:mt-2 max-[1023px]:ml-3 lg:justify-center lg:mt-5 text-3xl">
+        <button onClick={handleButtonClick} className="max-[1390px]:visible lg:hidden w-full flex items-center max-[1390px]:mt-2 max-[1390px]:ml-3 lg:justify-center lg:mt-5 text-3xl">
           <BiMenu className=""></BiMenu>
         </button>
-        <button onClick={() => scrollToPosition(0)} className="flex visible max-[1023px]:hidden items-center ml-5 mt-5">
+        <button onClick={() => scrollToPosition(0)} className="flex visible max-[1390px]:hidden items-center ml-5 mt-5">
           <BiHome></BiHome> <p className="text-sm ml-2">Hem</p>
         </button>
-        <button onClick={() => scrollToPosition(500)} className="scroll-smooth flex visible max-[1023px]:hidden items-center ml-5 mt-3">
+        <button onClick={() => scrollToPosition(500)} className="scroll-smooth flex visible max-[1390px]:hidden items-center ml-5 mt-3">
           <BiUser></BiUser><p className="text-sm ml-2">Om mig</p>
         </button>
-        <button onClick={() => scrollToPosition(1000)} className="flex visible max-[1023px]:hidden items-center ml-5 mt-3 mb-5">
+        <button onClick={() => scrollToPosition(1000)} className="flex visible max-[1390px]:hidden items-center ml-5 mt-3 mb-5">
           <BiNotepad></BiNotepad><p className="text-sm ml-2">Projekt</p>
         </button>
         <Line></Line>
